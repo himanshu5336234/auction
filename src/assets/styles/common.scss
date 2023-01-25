@@ -1,0 +1,40 @@
+
+.pointer{cursor: pointer;}
+.link{
+    @include FontStyle(12, 16, 600);
+    color: $color-link;
+}
+
+// Flex css
+.centre-align { @include centre-align; }
+.between-align { @include between-align; }
+
+// Text Colors
+
+.primaryLink { color: $color-link; }
+.textSecondary{ color: $textSecondary; }
+.texGray { color: $color-gray; }
+.textPrimary {
+    color: $color-primary;
+    svg * {
+        color: $color-primary;
+    }
+}
+.textverified{ color:$color-link; cursor: pointer; }
+.success{ color:$color-success; }
+.error{ color:$color-error; }
+.textGray { color: $primary-border-grey; }
+
+.textSmall { @include FontStyle(12, 16, 600); }
+
+// Align Text 
+.textCenter { text-align: center; }
+.textRight { text-align: right; }
+
+// Buttons css
+button {
+    background: none;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+}

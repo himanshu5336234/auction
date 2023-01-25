@@ -1,0 +1,53 @@
+
+@mixin header-font{
+    font-family: 'Overpass';
+    font-style: normal;
+}
+
+@mixin font-height-med{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@mixin font-height-large {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.font-medium{
+    @include header-font();
+    @include font-height-med();
+    font-weight: 500;
+}
+
+.font-bold{
+    @include header-font();
+    @include font-height-med();
+    font-weight: 600;
+}
+
+.font-strong{
+    @include header-font();
+    @include font-height-large();
+    font-weight: 700;
+}
+
+// h1 to h6 tag
+h1{
+    @include FontStyle(35,44);
+    font-weight: 700;
+    @include mediaQuery(991px){
+        @include FontStyle(30,36);
+    }
+    @include mediaQuery(767px){
+        @include FontStyle(24,30);
+    }
+}
+h4{
+    @include FontStyle(24,28);
+    font-weight: 700;
+}
+h6{
+    @include FontStyle(14,20);
+    font-weight: 700;
+}

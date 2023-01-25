@@ -1,0 +1,27 @@
+@mixin centre-align {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+@mixin between-align {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+// Font
+
+@mixin FontStyle( $fontSize: null, $lineHeight: null, $fontWeight:nulll) {
+	font-size: $fontSize+px;
+	line-height: $lineHeight+px;
+    font-weight: $fontWeight;
+}
+
+// Media Queries
+@mixin mediaQuery ($point) {
+    @media screen and (max-width:$point) {
+        @content;
+    }
+}
